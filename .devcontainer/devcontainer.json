@@ -1,0 +1,22 @@
+{
+  "name": "CAIPs Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+  "features": {},
+  "postCreateCommand": "npm install && npm run dev",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+  "remoteUser": "node",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Web App",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}
